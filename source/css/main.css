@@ -1,3 +1,23 @@
-html {
-    background-image: url("../img/lined_paper/lined_paper.png");
+html {}
+
+/** {border: 1px dashed black;}*/
+
+.titles {
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    overflow:hidden;
+}
+
+.footer .image {
+    margin:5px;
+    cursor: pointer;
+}
+
+.footer img {
+    border-radius: 10px;
 }
