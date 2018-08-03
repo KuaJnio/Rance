@@ -2,22 +2,29 @@ html {}
 
 /** {border: 1px dashed black;}*/
 
-.titles {
-    cursor: pointer;
-}
+* {cursor: default;}
 
-.footer {
+footer {
     position: absolute;
     width: 100%;
     bottom: 0;
     overflow:hidden;
 }
 
-.footer .image {
+footer .image {
     margin:5px;
     cursor: pointer;
 }
 
-.footer img {
+footer img {
     border-radius: 10px;
+}
+
+.chapitre {
+    border-radius: 10px;
+}
+
+.modal-content {
+    width: 80%;
+    height: 90%;
 }
