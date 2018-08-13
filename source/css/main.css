@@ -1,6 +1,9 @@
 html {}
 
-* {cursor: default;}
+* {
+    cursor: default;
+    outline: none;
+}
 
 footer .image {
     margin:5px;
@@ -20,8 +23,14 @@ footer img {
     height: 90%;
 }
 
+footer .icon {
+    margin: 15px;
+}
 
-
+.tipeee {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
 /*! debug.css | MIT License | zaydek.github.com/debug.css */
 /*
 *:not(path):not(g) {
