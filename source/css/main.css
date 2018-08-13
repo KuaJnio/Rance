@@ -31,6 +31,18 @@ footer .icon {
     margin-top: 75px;
     margin-bottom: 75px;
 }
+
+
+.hero-body {
+  height: calc(100vh - 80px);
+  overflow: auto;
+}
+
+footer {
+    height: 80px;
+}
+
+
 /*! debug.css | MIT License | zaydek.github.com/debug.css */
 /*
 *:not(path):not(g) {
