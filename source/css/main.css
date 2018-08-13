@@ -1,15 +1,6 @@
 html {}
 
-/** {border: 1px dashed black;}*/
-
 * {cursor: default;}
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    overflow:hidden;
-}
 
 footer .image {
     margin:5px;
@@ -27,4 +18,16 @@ footer img {
 .modal-content {
     width: 80%;
     height: 90%;
+}
+
+
+
+/*! debug.css | MIT License | zaydek.github.com/debug.css */
+/*
+*:not(path):not(g) {
+	color:                    hsla(210, 100%, 100%, 0.9) !important;
+	background:               hsla(210, 100%,  50%, 0.5) !important;
+	outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+	box-shadow: none !important;
 }
