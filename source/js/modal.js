@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $(".chapitre-1").click(function(){
+    	$(".modal").removeClass("is-active");
+    });
     $(".chapitre-2").click(function(){
     	$(".modal").addClass("is-active");
     });
