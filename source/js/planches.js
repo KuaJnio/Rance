@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    $(".modal").removeClass("is-active");
-    $(".chapitre").click(function(){
+    $(".chapitre-2").click(function(){
+    	$(".modal").addClass("is-active");
+    });
+    $(".chapitre-3").click(function(){
     	$(".modal").addClass("is-active");
     });
     $(".modal-close").click(function(){
