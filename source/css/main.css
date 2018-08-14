@@ -1,4 +1,6 @@
-html {}
+html {
+    background-image: url("../img/dark-grey-terrazzo.png");
+}
 
 * {
     cursor: default;
@@ -29,7 +31,7 @@ footer {
 }
 
 .planche {
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 .lecture-navigation .icon {
