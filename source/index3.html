@@ -10,7 +10,7 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-                    <div class="layer1" style="position:absolute; z-index:-1"><img src="img/parallax/par_content/1.png"></div>
+                    <div class="layer1" style="position:absolute; z-index:1"><img src="img/parallax/par_content/1.png"></div>
                     <div class="layer2" style="position:absolute; z-index:2"><img src="img/parallax/par_content/2.png"></div>
                     <div class="layer3" style="position:absolute; z-index:3"><img src="img/parallax/par_content/3.png"></div>
                     <div class="layer4" style="position:absolute; z-index:4"><img src="img/parallax/par_content/4.png"></div>
@@ -21,31 +21,42 @@
      	<!-- Scripts -->
 	    <script>
             var lastScrollTop = 0;
+            var abs = 0;
+            var st = 0;
                 $(window).scroll(function () {
-                console.log($(window).scrollTop());
-                var st = $(window).scrollTop();
-                if (Math.abs(st - lastScrollTop) > 20) {
-                    if (st < lastScrollTop) {
-                        if (st < 100) {
-                            $('.layer3').animate({top: '-=1'}, 10);
-                            $('.layer4').animate({top: '-=2'}, 10);
-                            $('.layer5').animate({top: '-=3'}, 10);
-                            $('.layer7').animate({top: '-=4'}, 10);
-                            $('.layer8').animate({top: '-=5'}, 10);
+                st = $(window).scrollTop();
+                abs = Math.abs(st - lastScrollTop);
+                console.log(`lastScrollTop is ${lastScrollTop}`);
+                console.log(`st is ${st}`);
+                console.log(`abs is ${abs}`);
+                if (abs > 20) {
+                    if (st > lastScrollTop) {
+                        console.log("going down");
+                        if (st < 100000) {
+                            $('.layer1').animate({top: '-=7'}, 10);
+                            $('.layer2').animate({top: '-=1'}, 10);
+                            $('.layer3').animate({top: '-=3'}, 10);
+                            $('.layer4').animate({top: '-=5'}, 10);
+                            $('.layer5').animate({top: '-=7'}, 10);
+                            $('.layer7').animate({top: '-=9'}, 10);
+                            $('.layer8').animate({top: '-=11'}, 10);
                         }
-                        if (st < 200) {
-                            $('.layer6').animate({top: '-=15'}, 10);
+                        if (st < 300) {
+                            $('.layer6').animate({top: '+=15'}, 10);
                         }
                     } else {
-                        if (st < 100) {
-                            $('.layer3').animate({top: '+=1'}, 10);
-                            $('.layer4').animate({top: '+=2'}, 10);
-                            $('.layer5').animate({top: '+=3'}, 10);
-                            $('.layer7').animate({top: '+=4'}, 10);
-                            $('.layer8').animate({top: '+=5'}, 10);
+                        console.log("going up");
+                        if (st < 100000) {
+                            $('.layer1').animate({top: '+=7'}, 10);
+                            $('.layer2').animate({top: '+=1'}, 10);
+                            $('.layer3').animate({top: '+=3'}, 10);
+                            $('.layer4').animate({top: '+=5'}, 10);
+                            $('.layer5').animate({top: '+=7'}, 10);
+                            $('.layer7').animate({top: '+=9'}, 10);
+                            $('.layer8').animate({top: '+=11'}, 10);
                         }
-                        if (st < 200) {
-                            $('.layer6').animate({top: '+=15'}, 10);
+                        if (st < 300) {
+                            $('.layer6').animate({top: '-=15'}, 10);
                         }
                     }
                     lastScrollTop = st;
